@@ -24,8 +24,7 @@ def get_video_url(cid,bvid,title):
 id = "xxx" #favlist?fid=   需要修改 收藏夹id
 surl = "https://api.bilibili.com/x/v3/fav/resource/list?media_id="+id+"&pn=1&ps=20&keyword=&order=mtime&type=0&tid=0&platform=web"
 
-header = {"user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0",
-          "cookie":"cookie"#需要修改
+header = {"user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
     ,"referer":"https://www.bilibili.com"}
 
 r = requests.get(url=surl,headers=header)
