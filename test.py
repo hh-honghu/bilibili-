@@ -31,7 +31,7 @@ r = requests.get(url=surl,headers=header)
 data = json.loads(r.text)
 num = data['data']['info']["media_count"]
 if num < 20: #只有一页
-    for i in range(num):
+    for i in range(20):
         try:
             title = data['data']["medias"][i]['title']
             bvid = data['data']["medias"][i]['bvid']
@@ -57,6 +57,23 @@ else:#多页
                 break
         print("第" + str(p + 1) + "页下载完成")
         time.sleep(2)
+
+
+
+
+                 #将mp4转化为mp3
+#import  moviepy
+# import  os
+# directory = '.'
+# for filename in os.listdir(directory):
+#     # 检查是否是文件（而不是目录）
+#     if os.path.isfile(os.path.join(directory, filename)):
+#         if filename.endswith('.mp4'):
+#             video_clip = moviepy.VideoFileClip(filename)
+#             new_filename = filename.replace('.mp4', '.mp3')
+#             video_clip.audio.write_audiofile(new_filename)
+#             video_clip.close()
+#             print(f"转换完成! 音频已保存为: {new_filename}")
 
 
 
